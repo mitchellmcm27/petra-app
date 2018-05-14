@@ -4,7 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ramyesteero.petra.about">
+    tools:context="com.example.ramyesteero.petra.about"
+    android:background="@color/colorBackground">
 
     <android.support.design.widget.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -23,10 +24,29 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="About"
+        android:text="About Petra"
         android:textColor="#FFFFFF"
         android:textSize="22dp"
         android:padding="15dp"
-        android:id="@+id/textView" />
+         />
+
+    <TextView
+        android:id="@+id/b"
+        android:layout_below="@+id/my_toolbar"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:text="  The courses ERS201 and ERS203, run by Dr. Dan Schulze until very recently, usually involved a component wherein the students would tour the campus alongside the professor, learning more about the rocks and outcrop present on campus. This app intends to replace a one-day tour into a continuous process, allowing students to learn more about the rocks and its corresponding history. It also makes them capable geologists in the making by enhancing their observational and interpretational skills involving rocks.
+\n\n  The main purpose of the app, Petra, is to serve as a database for easily accessible information of rocks on the UTM campus, to the students and staff of UTM, allowing them to actively engage in rock identification. Information on the rocks located on campus are not limited to just the mineralogy and name, but also include origin, types of fossils observed, and a brief description, if any.
+\n\n  The development of this app would have not been possible without the help of a certain few! I am thankful to Dr. Lindsay Schoenbohm for her guidance and input since inception. I am also grateful to Ramy Rafaat Esteero for spending time on app development. Without you, this app would have not been successfully executed. I would also like to appreciate Ustat Rai, for his work in creating the logo for ‘Petra’.
+\n\n  Sheila Ballantyne, the lab technician, was also pivotal in this project and facilitated the fabrication of labels that were installed on rocks and outcrops across campus. This increases awareness amongst students, stimulating them to use the app and learn more about the geological history of rocks and outcrops on campus.
+\n\n  This app hopes to inspire Earth Science students by exposing them to the adventurous and interpretive aspects of Geology. Hopefully with the use of this app, a few of you develop a genuine interest in geology or any of the earth sciences and pursue it as a future career option!
+\n\n  Happy rock hunting!"
+        android:textColor="#000000"
+        android:textSize="40px"
+        android:padding="20px"
+        android:background="@color/colorBackground"
+        android:scrollbars = "vertical"
+        />
 
 </RelativeLayout>

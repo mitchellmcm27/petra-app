@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorBackground"
     tools:context="com.example.ramyesteero.petra.home">
 
     <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -19,10 +20,24 @@
         android:layout_margin="0dp">
         <Space />
 
+        <!--<TextView-->
+            <!--android:id="@+id/a"-->
+            <!--android:text="UTM \n CHEMICAL \n &amp; \n PHYSICAL \n SCIENCES"-->
+            <!--android:textColor="#000000"-->
+            <!--app:backgroundTint="@color/colorPrimaryDark"-->
+            <!--android:layout_gravity="center"-->
+            <!--android:gravity="center"-->
+            <!--android:layout_column="0"-->
+            <!--android:layout_row="0"-->
+            <!--android:layout_columnSpan="2"-->
+            <!--android:layout_rowWeight="1"-->
+            <!--android:textSize="70px"-->
+            <!--android:padding="20px"-->
+            <!--android:background="@color/colorBackground" />-->
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/a"
-            android:text="UTM \n chemical and physical sciences"
+            android:text="UTM \n chemical &amp; physical sciences"
             android:textColor="#FFFFFF"
             app:backgroundTint="@color/colorPrimaryDark"
             android:layout_gravity="fill"
@@ -30,12 +45,13 @@
             android:layout_row="0"
             android:layout_columnSpan="2"
             android:layout_rowWeight="1"
-            android:textSize="70px"
+            android:textSize="90px"
+            android:fontFamily="Centaur"
             />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/qr"
-            android:text="QR"
+            android:text="QR\nScanner"
             android:textColor="#FFFFFF"
             app:backgroundTint="@color/colorPrimaryDark"
             android:layout_column="0"
@@ -44,7 +60,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:padding="0px"
-            android:textSize="30px"/>
+            android:textSize="40px"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/map"
@@ -57,11 +73,11 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:padding="0px"
-            android:textSize="30px"/>
+            android:textSize="40px"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/collection"
-            android:text="collection"
+            android:text="rock\ncollection"
             android:textColor="#FFFFFF"
             app:backgroundTint="@color/colorPrimaryDark"
             android:layout_column="0"
@@ -70,11 +86,11 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:padding="0px"
-            android:textSize="30px"/>
+            android:textSize="40px"/>
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/about"
-            android:text="about"
+            android:text="about\npetra"
             android:textColor="#FFFFFF"
             app:backgroundTint="@color/colorPrimaryDark"
             android:layout_column="1"
@@ -83,7 +99,7 @@
             android:layout_columnWeight="1"
             android:layout_rowWeight="1"
             android:padding="0px"
-            android:textSize="30px"/>
+            android:textSize="40px"/>
 
 
     </GridLayout>

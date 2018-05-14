@@ -24,7 +24,7 @@ public class home extends AppCompatActivity {
         Button button_map = (Button) findViewById(R.id.map);
         button_map.setOnClickListener (new View.OnClickListener() {
             public void onClick(View v) {
-                Intent i = new Intent(getApplicationContext(),map.class);
+                Intent i = new Intent(getApplicationContext(),gmaps.class);
                 startActivity(i);
             }
         });
