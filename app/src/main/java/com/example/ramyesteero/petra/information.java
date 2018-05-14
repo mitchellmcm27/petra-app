@@ -249,7 +249,7 @@ public class information extends AppCompatActivity {
             imdots[i].setImageDrawable(ContextCompat.getDrawable(getApplicationContext(), R.drawable.nonactive_dot));
 
             LinearLayout.LayoutParams params = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.WRAP_CONTENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-            params.setMargins(0,0,0,0);
+            params.setMargins(8,4,8,4);
             dots.addView(imdots[i], params);
         }
 

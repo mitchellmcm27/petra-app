@@ -1,0 +1,40 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+
+    <com.google.android.gms.maps.MapView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <Button
+        android:id="@+id/viewRock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#359c5e"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentTop="true"
+        android:padding="8dp"
+        android:layout_margin="5dp"
+        android:text="View Rock Information"
+        android:textColor="#ffffff"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/zoomBack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#094856"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:padding="8dp"
+        android:layout_margin="5dp"
+        android:text="Zoom back to UTM"
+        android:textColor="#ffffff"
+        android:visibility="gone"/>
+
+</RelativeLayout>

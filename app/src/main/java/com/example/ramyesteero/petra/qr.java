@@ -46,7 +46,6 @@ public class qr extends AppCompatActivity {
                 } else {
                     Intent i = new Intent(qr.this, information.class);
                     i.putExtra("ROCK_ID", result.getContents());
-
                     startActivity(i);
                     finish();
 
@@ -55,25 +54,7 @@ public class qr extends AppCompatActivity {
                 super.onActivityResult(requestCode, resultCode, data);
             }
         } else {
-            Intent i = new Intent(qr.this, home.class);
-            startActivity(i);
             finish();
         }
     }
-
-//    protected void onPause(){
-//        super.onPause();
-//        finish();
-//    }
-//
-//    protected void onStop(){
-//        super.onStop();
-//        finish();
-//    }
-//
-//    protected void onDestroy(){
-//        super.onDestroy();
-//        finish();
-//    }
-
 }
