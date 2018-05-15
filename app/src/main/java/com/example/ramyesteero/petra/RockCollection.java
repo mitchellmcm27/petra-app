@@ -18,6 +18,14 @@ public class RockCollection {
     private ArrayList<Rock> rocks = new ArrayList<>();
     private Map<String, Rock> rocksById = new HashMap<>();
 
+    public Rock getRockById(String id) {
+        return rocksById.get(id);
+    }
+
+    public ArrayList<Rock> getRocks() {
+        return this.rocks;
+    }
+
     private RockCollection() {
         Rock granite1 = new Rock();
         granite1.name = "Granite - 1";
@@ -36,7 +44,7 @@ public class RockCollection {
                 "have formed during the latter stages of cooling of magma as the rock is rich in " +
                 "silicic minerals that crystallize later as they require a lower temperature for " +
                 "crystallizing out of the magma.";
-        granite1.pics = new String[]{"p1", "p2", "p3", "p4"};
+        granite1.images = new int[]{R.drawable.granite1n1, R.drawable.granite1n2, R.drawable.granite1n3};
         this.rocks.add(granite1);
         this.rocksById.put(granite1.id, granite1);
 
@@ -62,7 +70,7 @@ public class RockCollection {
                 "essentially causing the rock to rust. This, along with the deep pitting, suggest" +
                 " that this boulder has been weathering on the surface of the Earth for a long " +
                 "period of time.";
-        tonalite1.pics = new String[]{"p1", "p2", "p3", "p4"};
+        tonalite1.images = new int[]{R.drawable.tonalite1n1, R.drawable.tonalite2n1, R.drawable.tonalite3n1};
         this.rocks.add(tonalite1);
         this.rocksById.put(tonalite1.id, tonalite1);
 
@@ -87,7 +95,7 @@ public class RockCollection {
                 "earth elements (REE) such as Cesium. Cesium is used in atomic clocks, " +
                 "photoelectric cells etc. Gemstones such as topaz, tourmaline, and aquamarine are" +
                 " also often found in pegmatite and are used to make jewellery.";
-        pegmatite1.pics = new String[]{"p1", "p2", "p3", "p4"};
+        pegmatite1.images = new int[] {R.drawable.granitepegmatite1n1, R.drawable.granitepegmatite2n1, R.drawable.granitepegmatite3n1};
         this.rocks.add(pegmatite1);
         this.rocksById.put(pegmatite1.id, pegmatite1);
 
@@ -103,9 +111,122 @@ public class RockCollection {
                 " of crystals of similar sizes, in the range of 1-3 mm.";
         syenite1.interpretation = "This plutonic, igneous rock cooled slowly from a magma " +
                 "chamber, allowing for the formation of visible crystals of biotite and quartz.";
-        syenite1.pics = new String[]{"p1", "p2", "p3", "p4"};
+        syenite1.images = new int[] {R.drawable.syenite1, R.drawable.syenite2, R.drawable.syenite3};
         this.rocks.add(syenite1);
         this.rocksById.put(syenite1.id, syenite1);
+
+        Rock tonalite2 = new Rock();
+        tonalite2.name = "Tonalite (Trondhjemite) - 2";
+        tonalite2.id = "syenite1";
+        tonalite2.rockType = "Igneous";
+        tonalite2.number = 15;
+        tonalite2.lat = -79.66265277777778;
+        tonalite2.lon = 43.54869722222222;
+        tonalite2.minerals = new String[]{"Plagioclase", "Biotite", "Quartz"};
+        tonalite2.texture = "This igneous rock has a massive texture (no layers) and large cyrstals. It also contains mafic (dark, wtih iron-rich minerals) xenoliths, with the largest one on the side of the rock facing the Kaneff Centre. There are striations carved into the top side of the boulder.";
+        tonalite2.interpretation = "This igneous rock is a tonalite which are formed by the crystallization of felsic magma within a magma chamber. They are phaneritic, implying that the crystals formed are visible to the unaided eye. The rock also contains xenoliths (small, embedded fragments) of a magic composition (suggestive of its xenolith nature as it does not conform with the composition of the rest of the rock; magic = rich in iron and magnesium, poor in silica). The word \"xenolith\" is made of \"xeno\" meaning foreign and \"lith\" meaning rock.  Xenoliths are ripped off from the wall when the magma moves up through the Earth's crust, and therefore tell us about the make-up of the Earth's deep crust and even mantle. The striations indicate that this rock later became a \"glacial erratic,\" or a rock transported (and scraped up) at the base of a glacier during the last ice age.";
+        tonalite2.images = new int[] {R.drawable.tonalite1n2, R.drawable.tonalite2n2, R.drawable.tonalite3n2};
+        this.rocks.add(tonalite2);
+        this.rocksById.put(tonalite2.id, tonalite2);
+
+        Rock pegmatite2 = new Rock();
+        pegmatite2.name = "Granite Pegmatite - 2";
+        pegmatite2.id = "pegmatite2";
+        pegmatite2.rockType = "Igneous";
+        pegmatite2.number = 2;
+        pegmatite2.lat = -79.66778333333333;
+        pegmatite2.lon = 43.54931666666666;
+        pegmatite2.minerals = new String[]{"Quartz", "Feldspar"};
+        pegmatite2.texture = "This igneous rock is all of the same composition, but part of the rock is coarse grained and part is extremely coarse grained (pegmatite), with the two parts separated by a \"contact\".";
+        pegmatite2.interpretation = "The large crystals of feldspar and quartz indicate that the rock  cooled slowly from a magma chamber deep under the surface of the Earth. The magma was relatively felsic (rich in silica), allowing for the crystallization of quartz and feldspar. In the late stages of cooling, a thin sheet of magma cut across the rock, cooling to form a pegmatite \"dike.\" It cooled slowly, allowing the exceptionally large crystals to grow. Pegmatites are formed during the last stages of cooling of magma, when the few drops of magma that remain form large crystals that are usually silicic (rich in silica). Pegmatites are of economic importance as they typically contain several rare earth elements (REE) such as Cesium. Cesium is used in atomic clocks, photoelectric cells etc.";
+        pegmatite2.images = new int[]{R.drawable.granitepegmatite1n2, R.drawable.granitepegmatite2n2, R.drawable.granitepegmatite3n2};
+        this.rocks.add(pegmatite2);
+        this.rocksById.put(pegmatite2.id, pegmatite2);
+
+        Rock granite2 = new Rock();
+        granite2.name = "Granite - 2";
+        granite2.id = "granite2";
+        granite2.rockType = "Igneous";
+        granite2.number = 7;
+        granite2.lat = -79.66588333333334;
+        granite2.lon = 43.548516666666664;
+        granite2.minerals = new String[]{"Quartz", "Biotite", "Feldspar"};
+        granite2.texture = "This igneous rock has a massive texture (no layers) and is composed of equal sized crystals. The cleavage in the biotite is particularly visible, identifiable as the flakiness in the black mineral.";
+        granite2.interpretation = "This plutonic, igneous rock formed through the slow cooling of a magma chamber, allowing for the growth of large crystals. The abundance of feldspar and biotite mean this rock is \"felsic,\" or high in silica. Because silicic minerals have a lower cooling temperature, this rock likely crystallized during the later stages of cooling of the magma.";
+        granite2.images = new int[] {R.drawable.granite2n1, R.drawable.granite2n2, R.drawable.granite2n3};
+        this.rocks.add(granite2);
+        this.rocksById.put(granite2.id, granite2);
+
+        Rock tonalite3 = new Rock();
+        tonalite3.name = "Tonalite (Trondhjemite) - 3";
+        tonalite3.id = "tonalite3";
+        tonalite3.rockType = "Igneous";
+        tonalite3.number = 8;
+        tonalite3.lat = -79.6656888888889;
+        tonalite3.lon = 43.54864444444444;
+        tonalite3.minerals = new String[]{"Plagioclase", "Biotite"};
+        tonalite3.minorMinerals = new String[]{"Feldspar", "Quartz"};
+        tonalite3.texture = "This igneous rock has a massive texture (no layers) and large cyrstals. There are striations carved into the top side of the boulder, oriented in an east-west direction.";
+        tonalite3.interpretation = "This is a Trondhjemite, which is a light-coloured version (leucrocratic - ‘leuco’ - light coloured)  of a Tonalite. The rock is igneous and is formed through the slow cooling of a magma chamber, which allows sufficient time for the crystallization of large crystals visible to the unaided eye. These rocks are dominantly found on Archaen terranes - terranes are crustal material that are formed or broken off one tectonic plate and deposited on another plate. Glacial striations are observed in this rock. The striations carved into the boulder occurred later, when it was embedded in an ice sheet - the rock was scraped along the bedrock at the bottom of the glacier during the last ice age. Boulders such as this, which have been transported long distances by glaciers, are called \"glacial erratics.\"";
+        tonalite3.images = new int[] {R.drawable.tonalite1n3, R.drawable.tonalite2n3, R.drawable.tonalite3n3};
+        this.rocks.add(tonalite3);
+        this.rocksById.put(tonalite3.id, tonalite3);
+
+        Rock gneiss1 = new Rock();
+        gneiss1.name = "Gneiss - 1";
+        gneiss1.id = "gneiss1";
+        gneiss1.rockType = "Metamorphic";
+        gneiss1.number = 1;
+        gneiss1.lat = -79.66811944444444;
+        gneiss1.lon = 43.549616666666665;
+        gneiss1.minerals = new String[]{"Biotite", "Feldspar", "Quartz"};
+        gneiss1.texture = "This metamorphic rock is \"foliated\" throughout, meaning it has layers. Because the rock is a gneiss, we call the layers \"gneissic foliation.\" Individual minerals are also elongated and lined up, meaning this rock has a \"lineation\" as well.";
+        gneiss1.interpretation = "Metamorphic rocks like gneiss form at great depths in the Earth's crust, where temperatures and pressures are high. The gneissic foliation indicates that the rock was being flattened, but the lineation indicates that it was being sheared or stretched at the same time.";
+        gneiss1.images = new int[] {R.drawable.gneiss1, R.drawable.gneiss2, R.drawable.gneiss3};
+        this.rocks.add(gneiss1);
+        this.rocksById.put(gneiss1.id, gneiss1);
+
+        Rock migmatiticGneiss1 = new Rock();
+        migmatiticGneiss1.name = "Migmatitic Gneiss - 1";
+        migmatiticGneiss1.id = "migmatiticGneiss1";
+        migmatiticGneiss1.rockType = "Metamorphic";
+        migmatiticGneiss1.number = 12;
+        migmatiticGneiss1.lat = -79.66298888888889;
+        migmatiticGneiss1.lon = 43.54651388888889;
+        migmatiticGneiss1.minerals = new String[]{"Feldspar", "Quartz", "Biotite", "Plagioclase"};
+        migmatiticGneiss1.texture = "This metamorphic rock is lineated (crystals are elongated and lined up) and foliated (has layers). The foliation is particularly clear, marked by alternating mafic (dark coloured) and felsic (light coloured) layers.";
+        migmatiticGneiss1.interpretation = "The layering in the rock, known as gneissic foliation, originated as the rock was squeezed deep under the earth, but the lineation also indicates the rock was being sheared (or smeared out) at the same time. This rock was metamorphosed at temperatures high enough that it just started to melt, forming the early stages of a \"migmatite,\" or a partially molten metamorphic rock. Migmatites straddle the boundary between igneous and metamorphic rocks.";
+        migmatiticGneiss1.images = new int[] {R.drawable.migmatiticgneiss1, R.drawable.migmatiticgneiss2, R.drawable.migmatiticgneiss3};
+        this.rocks.add(migmatiticGneiss1);
+        this.rocksById.put(migmatiticGneiss1.id, migmatiticGneiss1);
+
+        Rock marble1 = new Rock();
+        marble1.name = "Marble";
+        marble1.id = "marble1";
+        marble1.rockType = "Metamorphic";
+        marble1.number = 16;
+        marble1.lat = -79.66542777777778;
+        marble1.lon = 43.548180555555554;
+        marble1.minerals = new String[]{"Tremolite", "Calcite"};
+        marble1.texture = "This metamorphic rock has a massive texture. It has been extensively recrystallized during metamorphism, allowing the really large crystals of tremolite to grow. Tremolite crystals are prismatic and have a milky white colour in this rock. Tremolite is rich in magnesium.";
+        marble1.interpretation = "Tremolite is magnesium rich, suggesting that fluids circulating through the rock were also rich in magnesium, and therefore the protolith (the rock before it was metamorphosed) was likely dolomite, not limestone, as dolomite is relatively rich in magnesium too. Tremolite is far less common that its sister mineral, actinolite; the two form a solid-solution series, meaning one transitions smoothly into the other as the composition of the mineral moves from more magnesium-rich to more iron-rich.";
+        marble1.images = new int[] {R.drawable.marble1, R.drawable.marble2, R.drawable.marble3};
+        this.rocks.add(marble1);
+        this.rocksById.put(marble1.id, marble1);
+
+        Rock migmatiticGneiss2 = new Rock();
+        migmatiticGneiss2.name = "Migmatitic Gneiss - 2";
+        migmatiticGneiss2.id = "migmatiticGneiss2";
+        migmatiticGneiss2.rockType = "Metamorphic";
+        migmatiticGneiss2.number = 17;
+        migmatiticGneiss2.lat = -79.66539722222223;
+        migmatiticGneiss2.lon = 43.54810555555555;
+        migmatiticGneiss2.minerals = new String[]{"Biotite", "Quartz", "Plagioclase"};
+        migmatiticGneiss2.texture = "This metamorphic rock has strong \"gneissic foliation,\" or layers, which are folded to make both asymmetrical and symmetrical folds ranging from tight (angles less than 60 degrees) to open (angles between 60 and 120 degrees). The layers sometimes stay the same thickness around the folds (parallel folds), but sometimes the limbs thin and the hinges thicken (similar folds). A white quartz vein runs through the rock. \"Chilled margins\" are identified by the smaller crystal size along the edges and the large crystals along the middle of the vein.";
+        migmatiticGneiss2.interpretation = "The alternating light and dark bands formed during metamorphism of this rock at high temperatures and pressures. The chilled margin along the quartz vein indicates that it intruded later, when the rock was cooler - the edges of the vein in contact with the cool surrounding rock cooled quickly, forming small quartz crystals while the center took longer to cool, allowing larger quartz crystals to grow. The folding in the rock indicates shearing during metamorphism.";
+        migmatiticGneiss2.images = new int[]{R.drawable.migmatiticgneiss1, R.drawable.migmatiticgneiss2, R.drawable.migmatiticgneiss3};
+        this.rocks.add(migmatiticGneiss2);
+        this.rocksById.put(migmatiticGneiss2.id, migmatiticGneiss2);
 
     }
 }

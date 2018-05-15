@@ -23,34 +23,29 @@ public class information extends AppCompatActivity {
     private int dotscount;
     private ImageView[] imdots;
 
+    private Rock rock;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_information);
 
-        DBManager dbManager;
-        dbManager = new DBManager(this, null, null, 1);
-        ArrayList<String> info = dbManager.getRockInformation(getIntent().getStringExtra("ROCK_ID"));
+        rock = RockCollection.getInstance().getRockById(getIntent().getStringExtra("ROCK_ID"));
 
         TextView name = (TextView) findViewById(R.id.name);
         TextView tttt = (TextView) findViewById(R.id.tttt);
         TextView iiii = (TextView) findViewById(R.id.iiii);
-        tttt.setText(getIntent().getStringExtra("ROCK_ID"));
+        tttt.setText(rock.name);
+        iiii.setText(rock.rockType);
+        name.setText(name.getText() + "\n" + rock.interpretation);
 
-        for (int i = 0; i < info.size(); i++) {
-            System.out.println(info);
-            if (i == 0) {
-                iiii.setText(info.get(i));
-            } else {
-                if (i == 4) {
-                    name.setText(name.getText() + "\n" + info.get(i));
-                }
-            }
 
+        Integer[] images = new Integer[rock.images.length];
+
+        for(int ctr = 0; ctr < rock.images.length; ctr++) {
+            images[ctr] = Integer.valueOf(rock.images[ctr]); // returns Integer value
         }
-
-        Integer [] images = new Integer[3];
-
+/*
         if (getIntent().getStringExtra("ROCK_ID").equals("Granite - 1")) {
             images[0] = R.drawable.granite1n1;
             images[1] = R.drawable.granite1n2;
@@ -236,6 +231,8 @@ public class information extends AppCompatActivity {
             images[1] = R.drawable.solutionbreccia2;
             images[2] = R.drawable.solutionbreccia3;
         }
+
+        */
         viewPager = (ViewPager) findViewById(R.id.viewPager);
         dots = (LinearLayout) findViewById(R.id.dots);
         viewPagerAdapter viewPagerAdapter = new viewPagerAdapter(this, images);

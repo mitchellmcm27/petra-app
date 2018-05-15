@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.lucasurbas.listitemview.ListItemView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rockCollectionItemView"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:liv_menu="@menu/single_menu"
+    app:liv_title="Title"
+    app:liv_subtitle="Subtitle"
+    app:liv_multiline="false"
+ />

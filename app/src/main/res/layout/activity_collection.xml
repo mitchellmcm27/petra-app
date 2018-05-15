@@ -93,7 +93,6 @@ android:id="@+id/textView" />
         app:liv_menu="@menu/single_menu"
         app:liv_title="Syenite"
         app:liv_subtitle="Mineral Composition: Feldspar and Quartz\n\nTexture: This igneous rock has a massive texture (no layers). It is composed of crystals of similar sizes, in the range of 1-3mm.\n\nInterpretation: This plutonic, igneous rock cooled slowly from a magma chamber, allowing for the formation of visible crystals of biotite and quartz."
-
         app:liv_multiline="false"
         />
 

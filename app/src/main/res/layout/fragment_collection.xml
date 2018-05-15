@@ -29,6 +29,12 @@
         />
 </android.support.v7.widget.Toolbar>
 
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/collectionRecyclerView"
+        android:scrollbars="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/ScrollView01"
@@ -80,11 +86,9 @@
         android:id="@+id/d"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         app:liv_menu="@menu/single_menu"
         app:liv_title="Syenite"
         app:liv_subtitle="Mineral Composition: Feldspar and Quartz\n\nTexture: This igneous rock has a massive texture (no layers). It is composed of crystals of similar sizes, in the range of 1-3mm.\n\nInterpretation: This plutonic, igneous rock cooled slowly from a magma chamber, allowing for the formation of visible crystals of biotite and quartz."
-
         app:liv_multiline="false"
         />
 

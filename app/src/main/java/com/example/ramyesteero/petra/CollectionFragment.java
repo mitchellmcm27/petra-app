@@ -3,6 +3,8 @@ package com.example.ramyesteero.petra;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,6 +12,10 @@ import android.widget.LinearLayout;
 
 
 public class CollectionFragment extends Fragment implements View.OnClickListener {
+
+    private RecyclerView collectionRecyclerView;
+    private RecyclerView.Adapter mAdapter;
+    private RecyclerView.LayoutManager mLayoutManager;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
@@ -21,6 +27,13 @@ public class CollectionFragment extends Fragment implements View.OnClickListener
             View v = rl.getChildAt(i);
             v.setOnClickListener(this);
         }
+
+        collectionRecyclerView = (RecyclerView) rootView.findViewById(R.id.collectionRecyclerView);
+        collectionRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(getContext());
+        collectionRecyclerView.setLayoutManager(mLayoutManager);
+        mAdapter = new RockCollectionAdapter(RockCollection.getInstance().getRocks());
+        collectionRecyclerView.setAdapter(mAdapter);
         return rootView;
     }
 
@@ -36,6 +49,9 @@ public class CollectionFragment extends Fragment implements View.OnClickListener
                 break;
             case R.id.c:
                 c(v);
+                break;
+            case R.id.d:
+                d(v);
                 break;
             case R.id.e:
                 e(v);

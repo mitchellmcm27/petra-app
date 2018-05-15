@@ -13,8 +13,10 @@ public class Rock {
     double lat;
     String location = "";
     String details = "";
-    String[] pics = new String[]{""};
+    String[] pics = new String[]{"p1", "p2", "p3", "p4"};
+    int[] images = new int[]{};
     String[] minerals = new String[]{""};
+    String[] minorMinerals = new String[]{""};
     String texture = "";
     String interpretation = "";
 }
