@@ -228,5 +228,47 @@ public class RockCollection {
         this.rocks.add(migmatiticGneiss2);
         this.rocksById.put(migmatiticGneiss2.id, migmatiticGneiss2);
 
+        Rock schist1 = new Rock();
+        schist1.name = "Schist - 1";
+        schist1.id = "migmatiticGneiss2";
+        schist1.rockType = "Metamorphic";
+        schist1.number = 19;
+        schist1.lat = -79.66355833333334;
+        schist1.lon = 43.548030555555556;
+        schist1.minerals = new String[]{"Quartz", "Feldspar", "Plagioclase", "Biotite"};
+        schist1.texture = "This metamorphic rock is strongly foliated (has layers). Feldspar veins with \"chilled margins\" (finger grain-size along the edges of the veins, coarser grains in the center) are found in the rock.";
+        schist1.interpretation = "This is an intermediate grade metamorphic rock, meaning it was subjected to enough heat and pressure to cause large, new minerals to form (the micas in particular), but it was not metamorphosed enough to convert it to gneiss. Within the veins, the fine crystals along the outside of the veins cooled quickly forming small crystals and the centers cooled more slowly, allowing larger crystals to grow. These \"chilled margins\" mean the veins were intruded after the rock had already cooled.";
+        schist1.images = new int[]{R.drawable.schist1n1, R.drawable.schist2n1, R.drawable.schist3n1};
+        this.rocks.add(schist1);
+        this.rocksById.put(schist1.id, schist1);
+
+        Rock mylonite1 = new Rock();
+        mylonite1.name = "Mylonite";
+        mylonite1.id = "mylonite1";
+        mylonite1.rockType = "Metamorphic";
+        mylonite1.number = 20;
+        mylonite1.lat = -79.66300833333334;
+        mylonite1.lon = 43.54795;
+        mylonite1.minerals = new String[]{"Feldspar", "Quartz", "Biotite", "Plagioclase"};
+        mylonite1.texture ="This metamorphic rock has a very strong foliation (layers) and a lineation (lines on the foliation planes) as well. Pink feldspar crystals are present in this rock that indicate the direction of shear experienced. These are known as \"augen,\" for their similarity in appearance to eyes (augen means eyes in German).";
+        mylonite1.interpretation = "Mylonite is formed through \"dynamic\" metamorphism involving shearing between fault blocks, producing a \"shear zone.\" The feldspar augen indicate the direction of shearing - the tops of the minerals are dragged in one direction, and the bottom in the other, giving them a sigmoidal shape. In the present orientation of the rock, the augen indicate the top of the rock was moved towards Kaneff and the bottom was moved towards the bus stop. Augen are usually dominant in the mineral plagioclase.";
+        mylonite1.images = new int[]{R.drawable.mylonite1, R.drawable.mylonite2, R.drawable.mylonite3};
+        this.rocks.add(mylonite1);
+        this.rocksById.put(mylonite1.id, mylonite1);
+
+        Rock gneiss2 = new Rock();
+        gneiss2.name = "Gneiss - 2";
+        gneiss2.id = "gneiss2";
+        gneiss2.rockType = "Metamorphic";
+        gneiss2.number = 21;
+        gneiss2.lat = -79.66357222222223;
+        gneiss2.lon = 43.54884444444444;
+        gneiss2.minerals = new String[]{"Feldspar", "Quartz", "Biotite", "Garnet", "Plagioclase"};
+        gneiss2.texture = "This metamorphic rock is \"foliated,\" meaning it has layers. The foliation is however not as well-defined as it is in other rocks around campus.";
+        gneiss2.interpretation = "This rock formed under high temperatures and pressures, likely near the base of a mountain range. The foliation results from minerals growing under great pressure. The presence of garnet (the red mineral) indicates that the protolith (the rock before it was metamorphosed) for this rock was likely a mudstone, as mudstone contains all of the diverse elements necessary for making garnet during metamorphism. Garnet is the birthstone for the month of January.";
+        gneiss2.images = new int[]{R.drawable.gneiss1n2, R.drawable.gneiss2n2, R.drawable.gneiss3n2};
+        this.rocks.add(gneiss2);
+        this.rocksById.put(gneiss2.id, gneiss2);
+
     }
 }
